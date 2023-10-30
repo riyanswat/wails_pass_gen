@@ -1,4 +1,4 @@
-#logo {
+/* #logo {
     display: block;
     width: 33%;
     height: 50%;
@@ -9,12 +9,60 @@
     background-size: 100% 100%;
     background-origin: content-box;
     border-radius: 50%;
+} */
+
+#logo {
+    display: block;
+    max-width: 33%; /* Set a maximum width to maintain aspect ratio */
+    max-height: 50%; /* Set a maximum height to maintain aspect ratio */
+    width: auto; /* Let the width adjust to maintain aspect ratio */
+    height: auto; /* Let the height adjust to maintain aspect ratio */
+    margin: 5% auto 0;
+    padding: 2% 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;
+    border-radius: 50%;
+    /* transition-duration: 0.5s; */
+    transition: transform 0.4s;
 }
+
+#logo:hover {
+    transform: rotateZ(360deg);
+}
+
+/* #logo {
+    display: block;
+    width: 33%;
+    height: 50%;
+    margin: 5% auto 0;
+    padding: 2% 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;
+    border-radius: 50%;
+} */
+
 
 .result {
     height: 20px;
     line-height: 20px;
     margin: 1.5rem auto;
+}
+
+#main-heading {
+    display: inline-block;
+    color: #64CCC5;
+    margin-top: 5%; /* Adjust this value as needed */
+    font-family: "Times New Roman", serif; /* Specify font-family correctly */
+    font-size: 30px; /* Set an appropriate font size */
+    transition-duration: 0.1s;
+}
+
+#main-heading:hover {
+    transform: scale(1.1);
 }
 
 .input-box .btn {
@@ -27,13 +75,13 @@
     padding: 0 8px;
     cursor: pointer;
     color: white;
-    background-color: rgb(36, 36, 168);
+    background-color: #10546b;
     transition-duration: 0.1s;
 }
 
 .input-box .btn:hover {
     /* background-image: linear-gradient(to top, #171f24 0%, #e2ebf0 100%); */
-    background-color: rgb(14, 14, 88);
+    background-color: #08394d;
     /* transform: rotateX(360deg); */
 }
 

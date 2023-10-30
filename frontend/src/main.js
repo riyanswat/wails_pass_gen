@@ -5,6 +5,7 @@ import logo from "./assets/images/logo-universal.jpg";
 import { Generate } from "../wailsjs/go/main/App";
 
 document.querySelector("#app").innerHTML = `
+    <h1 id="main-heading">RANDOM PASSWORD GENERATOR</h1>
     <img id="logo" class="logo">
       <div class="result" id="text">Please enter the length of the password below:</div>
       <span class="result" id="result"></span>

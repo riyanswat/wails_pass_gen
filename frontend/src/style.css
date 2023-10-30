@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0;
+    padding-top: 20px;
     color: white;
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -21,6 +22,6 @@ body {
 }
 
 #app {
-    height: 100vh;
+    height: 80vh;
     text-align: center;
 }
