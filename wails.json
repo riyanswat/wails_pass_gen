@@ -9,5 +9,25 @@
   "author": {
     "name": "Rayan Khan",
     "email": "abc@xyz.com"
+  },
+  "build": {
+    "targets": [
+      {
+        "os": "darwin",
+        "arch": "amd64",
+        "outputName": "helloworld-darwin-amd64"
+      },
+      {
+        "os": "linux",
+        "arch": "amd64",
+        "outputName": "helloworld-linux-amd64"
+      },
+      {
+        "os": "win32",
+        "arch": "amd64",
+        "outputName": "helloworld-win32-amd64",
+        "compatibility": ["windows7", "windows8"]
+      }
+    ]
   }
 }

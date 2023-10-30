@@ -6,11 +6,11 @@ import { Generate } from "../wailsjs/go/main/App";
 
 document.querySelector("#app").innerHTML = `
     <h1 id="main-heading">RANDOM PASSWORD GENERATOR</h1>
-    <img id="logo" class="logo">
-      <div class="result" id="text">Please enter the length of the password below:</div>
+    <img id="logo" class="logo" draggable="false">
+      <div class="result" id="text"></div>
       <span class="result" id="result"></span>
       <div class="input-box" id="input">
-        <input class="input" placeholder="Length" id="length" type="text" autocomplete="off" />
+        <input class="input" placeholder="Password length" id="length" type="text" autocomplete="off" />
         <button class="btn" onclick="generate()">Generate</button>
       </div>
     </div>
@@ -25,7 +25,8 @@ let textElement = document.getElementById("text");
 window.generate = function () {
   let length = Number(lengthElement.value);
   if (isNaN(length)) {
-    textElement.innerText = "Please enter a valid length!";
+    document.getElementById("result").innerText =
+      "Please enter a valid length!";
     return;
   }
   let maxLength = 24;
@@ -36,7 +37,7 @@ window.generate = function () {
   if (length == 0) {
     length = 8;
   }
-  if (length > 24) {
+  if (length > maxLength) {
     resultElement.innerText = `Password length shouldn't exceed ${maxLength}`;
     return;
   }

@@ -11,16 +11,12 @@
     background-size: 100% 100%;
     background-origin: content-box;
     border-radius: 50% !important;
-    transition: transform 0.4s;
+    transition: transform 0.1s;
 }
-
-
 
 #logo:hover {
-    transform: rotateZ(360deg);
+    transform: scale(1.04);
 }
-
-
 
 .result {
     height: 20px;
@@ -33,19 +29,21 @@
     color: #64CCC5;
     margin-top: 5%; /* Adjust this value as needed */
     font-family: "Times New Roman", serif; /* Specify font-family correctly */
-    font-size: 30px; /* Set an appropriate font size */
-    transition-duration: 0.1s;
+    font-size: 35px; /* Set font size */
+    /* transition-duration: 0.1s; */
+    cursor: default;
+    user-select: none;
 }
 
-#main-heading:hover {
-    transform: scale(1.1);
-}
+/* #main-heading:hover {
+    transform: scale(1.02);
+} */
 
 .input-box .btn {
     width: 70px;
     height: 30px;
     line-height: 30px;
-    border-radius: 3px;
+    border-radius: 6px;
     border: none;
     margin: 0 0 0 20px;
     padding: 0 8px;
