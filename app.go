@@ -39,12 +39,5 @@ func (a *App) startup(ctx context.Context) {
 
 // Generates a random password of length 'length'
 func (a *App) Generate(length int) string {
-	// max_length := 24
-	// if length > max_length {
-	// 	return fmt.Sprintf("Password length shouldn't exceed %d", max_length)
-	// } else if length < 1 {
-	// 	length = 8
-	// }
 	return generateRandomPassword(length)
-	//fmt.Sprintf("Your random password is:\n%s", pass)
 }
