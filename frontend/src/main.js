@@ -10,7 +10,7 @@ document.querySelector("#app").innerHTML = `
       <div class="result" id="text">Please enter the length of the password below:</div>
       <span class="result" id="result"></span>
       <div class="input-box" id="input">
-        <input class="input" id="length" type="text" autocomplete="off" />
+        <input class="input" placeholder="Length" id="length" type="text" autocomplete="off" />
         <button class="btn" onclick="generate()">Generate</button>
       </div>
     </div>
@@ -20,12 +20,16 @@ document.getElementById("logo").src = logo;
 let lengthElement = document.getElementById("length");
 lengthElement.focus();
 let resultElement = document.getElementById("result");
-
+let textElement = document.getElementById("text");
 // Setup the generate function
 window.generate = function () {
   let length = Number(lengthElement.value);
+  if (isNaN(length)) {
+    textElement.innerText = "Please enter a valid length!";
+    return;
+  }
   let maxLength = 24;
-  document.getElementById("text").style.display = "none";
+  textElement.style.display = "none";
   resultElement.style.display = "block";
 
   // Check if the input is empty
@@ -36,7 +40,6 @@ window.generate = function () {
     resultElement.innerText = `Password length shouldn't exceed ${maxLength}`;
     return;
   }
-
   // Call App.Generate(length)
   try {
     Generate(length)

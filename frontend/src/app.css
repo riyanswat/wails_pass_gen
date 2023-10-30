@@ -1,19 +1,6 @@
-/* #logo {
-    display: block;
-    width: 33%;
-    height: 50%;
-    margin: auto;
-    padding: 10% 0 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-origin: content-box;
-    border-radius: 50%;
-} */
-
 #logo {
     display: block;
-    max-width: 33%; /* Set a maximum width to maintain aspect ratio */
+    max-width: 50%; /* Set a maximum width to maintain aspect ratio */
     max-height: 50%; /* Set a maximum height to maintain aspect ratio */
     width: auto; /* Let the width adjust to maintain aspect ratio */
     height: auto; /* Let the height adjust to maintain aspect ratio */
@@ -23,27 +10,16 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-origin: content-box;
-    border-radius: 50%;
-    /* transition-duration: 0.5s; */
+    border-radius: 50% !important;
     transition: transform 0.4s;
 }
+
+
 
 #logo:hover {
     transform: rotateZ(360deg);
 }
 
-/* #logo {
-    display: block;
-    width: 33%;
-    height: 50%;
-    margin: 5% auto 0;
-    padding: 2% 0 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-origin: content-box;
-    border-radius: 50%;
-} */
 
 
 .result {

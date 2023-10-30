@@ -28,7 +28,6 @@ func generateRandomPassword(length int) string {
 	for c := range password {
 		password[c] = allChars[rand.Intn(len(allChars))]
 	}
-	// fmt.Println(string(password))
 	return string(password)
 }
 
