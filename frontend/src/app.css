@@ -39,6 +39,10 @@
     transform: scale(1.02);
 } */
 
+#result {
+    color: #64CCC5;
+}
+
 .input-box .btn {
     width: 70px;
     height: 30px;
