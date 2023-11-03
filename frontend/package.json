@@ -11,6 +11,7 @@
     "vite": "^3.0.7"
   },
   "dependencies": {
-    "clipboardy": "^4.0.0"
+    "clipboardy": "^4.0.0",
+    "sweetalert2": "11.9.0"
   }
 }

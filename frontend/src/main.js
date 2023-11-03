@@ -1,12 +1,19 @@
 import "./style.css";
 import "./app.css";
 import clipboardy from "clipboardy";
+import Swal from "sweetalert2";
 
 import { Generate } from "../wailsjs/go/main/App";
 
-let lengthElement = document.getElementById("length");
+// html elements
+const lengthElement = document.getElementById("length");
 lengthElement.focus();
-let resultElement = document.getElementById("result");
+const resultElement = document.getElementById("result");
+const lightDark = document.getElementById("light-dark");
+const mainHeading = document.getElementById("main-heading");
+const htmlElement = document.querySelector("html");
+
+// ----------
 
 window.generate = function () {
   let length = Number(lengthElement.value);
@@ -32,10 +39,27 @@ window.generate = function () {
     Generate(length)
       .then((result) => {
         // Update result with data back from App.Generate()
-        resultElement.innerText = `Your random password is: ${result}`;
+        resultElement.innerHTML = `Your random password is: <strong>${result}</strong>`;
         lengthElement.value = "";
+        // ============================================
+        // Swal.fire(
+        //   "Password copied",
+        //   "Your password has been copied to the clipboard",
+        //   "success"
+        //   );
+        // ============================================
 
-        // Copy the result to the clipboard asynchronously
+        setTimeout(() => {
+          Swal.fire(
+            "Password copied",
+            "Your password has been copied to the clipboard",
+            "success"
+          );
+        }, 300);
+
+        // ============================================
+
+        // Copy the result to the clipboard
         clipboardy.write(result, function (err) {
           if (err) {
             console.error(err);
@@ -52,19 +76,29 @@ window.generate = function () {
   }
 };
 
-let lightDark = document.getElementById("light-dark");
+// Light/Dark mode implementation
 lightDark.onclick = function () {
   if (lightDark.innerHTML != "🌙") {
+    // Light mode
     lightDark.innerHTML = "🌙";
-    document.getElementById("main-heading").style.color = "rgb(23, 31, 44)";
-    document.getElementById("result").style.color = "rgb(23, 31, 44)";
-    document.body.style.backgroundColor = "rgb(255, 255, 255)";
+    mainHeading.style.color = "rgb(23, 31, 44)";
+    resultElement.style.color = "rgb(23, 31, 44)";
+    // document.body.style.backgroundColor = "rgb(255, 255, 255)";
     document.querySelector("html").style.backgroundColor = "rgb(255, 255, 255)";
+    lengthElement.style.backgroundColor = "rgb(23, 31, 44)";
+    lengthElement.style.color = "rgb(231, 219, 219)";
+    lengthElement.style.caretColor = "rgb(231, 219, 219)";
+    // document.querySelector("html").transitionDuration = "1s";
   } else {
+    // Dark mode
     lightDark.innerHTML = "☀️";
-    document.getElementById("main-heading").style.color = "#64CCC5";
-    document.getElementById("result").style.color = "#64CCC5";
-    document.body.style.backgroundColor = "rgb(23, 31, 44)";
+    mainHeading.style.color = "#64CCC5";
+    resultElement.style.color = "#64CCC5";
+    // document.body.style.backgroundColor = "rgb(23, 31, 44)";
     document.querySelector("html").style.backgroundColor = "rgb(23, 31, 44)";
+    lengthElement.style.backgroundColor = "rgb(231, 219, 219)";
+    lengthElement.style.color = "rgb(23, 31, 44)";
+    lengthElement.style.caretColor = "rgb(23, 31, 44)";
+    // document.querySelector("html").transitionDuration = "1s";
   }
 };
