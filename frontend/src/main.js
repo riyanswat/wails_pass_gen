@@ -51,3 +51,20 @@ window.generate = function () {
     console.error(err);
   }
 };
+
+let lightDark = document.getElementById("light-dark");
+lightDark.onclick = function () {
+  if (lightDark.innerHTML != "🌙") {
+    lightDark.innerHTML = "🌙";
+    document.getElementById("main-heading").style.color = "rgb(23, 31, 44)";
+    document.getElementById("result").style.color = "rgb(23, 31, 44)";
+    document.body.style.backgroundColor = "rgb(255, 255, 255)";
+    document.querySelector("html").style.backgroundColor = "rgb(255, 255, 255)";
+  } else {
+    lightDark.innerHTML = "☀️";
+    document.getElementById("main-heading").style.color = "#64CCC5";
+    document.getElementById("result").style.color = "#64CCC5";
+    document.body.style.backgroundColor = "rgb(23, 31, 44)";
+    document.querySelector("html").style.backgroundColor = "rgb(23, 31, 44)";
+  }
+};

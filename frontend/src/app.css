@@ -34,6 +34,18 @@
     user-select: none;
 }
 
+#light-dark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+}
+
+
 #result {
     color: #64CCC5;
 }
