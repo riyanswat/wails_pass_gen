@@ -18,8 +18,8 @@ func main() {
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:  "Random password generator",
-		Width:  1024,
-		Height: 650,
+		Width:  724,
+		Height: 600,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
