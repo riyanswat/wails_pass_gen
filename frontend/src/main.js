@@ -11,7 +11,6 @@ lengthElement.focus();
 const resultElement = document.getElementById("result");
 const lightDark = document.getElementById("light-dark");
 const mainHeading = document.getElementById("main-heading");
-const htmlElement = document.querySelector("html");
 
 // ----------
 
@@ -83,22 +82,18 @@ lightDark.onclick = function () {
     lightDark.innerHTML = "🌙";
     mainHeading.style.color = "rgb(23, 31, 44)";
     resultElement.style.color = "rgb(23, 31, 44)";
-    // document.body.style.backgroundColor = "rgb(255, 255, 255)";
     document.querySelector("html").style.backgroundColor = "rgb(255, 255, 255)";
     lengthElement.style.backgroundColor = "rgb(23, 31, 44)";
     lengthElement.style.color = "rgb(231, 219, 219)";
     lengthElement.style.caretColor = "rgb(231, 219, 219)";
-    // document.querySelector("html").transitionDuration = "1s";
   } else {
     // Dark mode
     lightDark.innerHTML = "☀️";
     mainHeading.style.color = "#64CCC5";
     resultElement.style.color = "#64CCC5";
-    // document.body.style.backgroundColor = "rgb(23, 31, 44)";
     document.querySelector("html").style.backgroundColor = "rgb(23, 31, 44)";
     lengthElement.style.backgroundColor = "rgb(231, 219, 219)";
     lengthElement.style.color = "rgb(23, 31, 44)";
     lengthElement.style.caretColor = "rgb(23, 31, 44)";
-    // document.querySelector("html").transitionDuration = "1s";
   }
 };

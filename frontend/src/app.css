@@ -45,20 +45,6 @@
     border: none;
 }
 
-/* Light Mode */
-.light-mode {
-    color: rgb(23, 31, 44);
-    background-color: rgb(255, 255, 255);
-  }
-  
-  /* Dark Mode */
-  .dark-mode {
-    color: #64CCC5;
-    background-color: rgb(23, 31, 44);
-    transition: background-color 1s, color 1s;
-  }
-  
-  
 
 #result {
     color: #64CCC5;
